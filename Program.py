@@ -46,3 +46,34 @@ while True:
                 continue
     total_moves += 1
     print('***********************************')
+
+
+def check():
+    # check p1 moves
+    # check horizontal win
+    if board['7'] == 'x' and board['8'] == 'x' and board['9'] == 'x':
+        print('........player one won!!')
+        return 1
+    if board['4'] == 'x' and board['5'] == 'x' and board['6'] == 'x':
+        print('........player one won!!')
+        return 1
+    if board['1'] == 'x' and board['2'] == 'x' and board['3'] == 'x':
+        print('........player one won!!')
+        return 1
+    # check diagonal
+    if board['7'] == 'x' and board['5'] == 'x' and board['3'] == 'x':
+        print('........player one won!!')
+        return 1
+    if board['9'] == 'x' and board['5'] == 'x' and board['1'] == 'x':
+        print('........player one won!!')
+        return 1
+    # check vertical
+    if board['7'] == 'x' and board['4'] == 'x' and board['1'] == 'x':
+        print('........player one won!!')
+        return 1
+    if board['8'] == 'x' and board['5'] == 'x' and board['2'] == 'x':
+        print('........player one won!!')
+        return 1
+    if board['9'] == 'x' and board['6'] == 'x' and board['3'] == 'x':
+        print('........player one won!!')
+        return 1
