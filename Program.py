@@ -16,7 +16,6 @@ player = 1  # first player
 total_moves = 0  # counts of moves
 end_check = 0
 
-
 while True:
     print(board['7'] + '|' + board['8'] + '|' + board['9'])
     print('-+-+-')
@@ -36,3 +35,14 @@ while True:
             else:
                 print('invalid input, please try again')
                 continue
+        else:
+            p2_input = input('player two:')
+            if p2_input.upper() in board and board[p2_input.upper()] == ' ':
+                board[p2_input.upper()] = 'O'
+                player = 1
+                break
+            else:
+                print('invalid input, please try again')
+                continue
+    total_moves += 1
+    print('***********************************')
