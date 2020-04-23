@@ -1,1 +1,38 @@
 print('---- Welcom to TicTacToe version 1,0 -----')
+
+print('7|8|9')
+print('-+-+-')
+print('4|5|6')
+print('-+-+-')
+print('1|2|3')
+print('***********************************')
+
+board = {
+    '7': ' ', '8': ' ', '9': ' ',
+    '4': ' ', '5': ' ', '6': ' ',
+    '1': ' ', '2': ' ', '3': ' '
+}
+player = 1  # first player
+total_moves = 0  # counts of moves
+end_check = 0
+
+
+while True:
+    print(board['7'] + '|' + board['8'] + '|' + board['9'])
+    print('-+-+-')
+    print(board['4'] + '|' + board['5'] + '|' + board['6'])
+    print('-+-+-')
+    print(board['1'] + '|' + board['2'] + '|' + board['3'])
+
+    if total_moves == 9 or end_check == 1:
+        break
+    while True:  # input from player
+        if player == 1:  # choose player
+            p1_input = input('player one:')
+            if p1_input.upper() in board and board[p1_input.upper()] == ' ':
+                board[p1_input.upper()] = 'x'
+                player = 2
+                break
+            else:
+                print('invalid input, please try again')
+                continue
