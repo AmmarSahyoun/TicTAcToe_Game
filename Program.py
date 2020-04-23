@@ -77,3 +77,33 @@ def check():
     if board['9'] == 'x' and board['6'] == 'x' and board['3'] == 'x':
         print('........player one won!!')
         return 1
+
+        # check p2 moves
+        # check horizontal win
+    if board['7'] == 'O' and board['8'] == 'O' and board['9'] == 'O':
+        print('******player one won!*******')
+        return 1
+    if board['4'] == 'O' and board['5'] == 'O' and board['6'] == 'O':
+        print('******player one won!*******')
+        return 1
+    if board['1'] == 'O' and board['2'] == 'O' and board['3'] == 'O':
+        print('******player one won!*******')
+        return 1
+        # check diagonal
+    if board['7'] == 'O' and board['5'] == 'O' and board['3'] == 'O':
+        print('******player one won!*******')
+        return 1
+    if board['9'] == 'O' and board['5'] == 'O' and board['1'] == 'O':
+        print('******player one won!*******')
+        return 1
+        # check vertical
+    if board['7'] == 'O' and board['4'] == 'O' and board['1'] == 'O':
+        print('******player one won!*******')
+        return 1
+    if board['8'] == 'O' and board['5'] == 'O' and board['2'] == 'O':
+        print('******player one won!*******')
+        return 1
+    if board['9'] == 'O' and board['6'] == 'O' and board['3'] == 'O':
+        print('******player one won!*******')
+        return 1
+    return 0
